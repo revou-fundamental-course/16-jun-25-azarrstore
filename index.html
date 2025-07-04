@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azarr Store - Your Digital Needs</title>
+    <!-- Using Tailwind Play CDN & removed redundant line-clamp plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Welcome Overlay -->
+    <div id="welcome-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-[100] flex items-center justify-center transition-opacity duration-700 ease-in-out">
+        <div id="welcome-box" class="text-center text-white opacity-0 transform translate-y-5 transition-all duration-1000 ease-out">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Welcome to Azarr Store</h2>
+            <p class="mb-8 text-lg text-gray-300">Let's get started. What should we call you?</p>
+            <form id="name-form" class="flex flex-col items-center">
+                <input type="text" id="name-input" placeholder="Enter your name here" class="bg-gray-800 border-2 border-gray-600 text-white text-center text-lg rounded-lg px-4 py-3 w-72 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-300" autocomplete="off">
+                <button type="submit" class="mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg transform hover:scale-105">
+                    Continue
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-900">Azarr Store</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
+                <a href="#profile" class="text-gray-600 hover:text-indigo-600 transition duration-300">Our Profile</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <!-- Accessibility Fix: Added aria-label for screen readers -->
+                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-indigo-600">Home</a>
+            <a href="#profile" class="block py-2 text-gray-600 hover:text-indigo-600">Our Profile</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-indigo-600">Services</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 id="welcome-message" class="text-4xl md:text-6xl font-bold leading-tight mb-4">Your One-Stop Digital Marketplace</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">From affordable hosting and domains to social media marketing and website creation, we provide the quality digital tools you need to succeed.</p>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">Explore Services</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="pt-20">
+            <!-- Photo Banner -->
+            <div class="photo-banner text-white text-center flex items-center justify-center">
+                <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+                    <h1 class="text-4xl md:text-6xl font-bold">Welcome to Azarr Store</h1>
+                    <p class="text-lg md:text-xl mt-2">Your trusted partner for digital needs.</p>
+                </div>
+            </div>
+            
+            <!-- About the Company -->
+            <div class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Our Store</h2>
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <div class="md:w-1/2">
+                            <img src="https://picsum.photos/600/400" alt="Azarr Store Digital Products" class="rounded-lg shadow-lg w-full">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Who We Are</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Azarr Store is a premier destination for a wide variety of digital necessities. We understand the modern landscape and provide essential tools for individuals and businesses to thrive online. Whether you're launching a new website, boosting your social media presence, or securing a new domain, we have a solution for you.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                               We are committed to delivering high-quality products that align perfectly with our clients' goals. Our focus on affordability and excellence ensures you get the best value without compromising on performance. At Azarr Store, your digital success is our business.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision and Mission -->
+            <div class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                     <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Commitment</h2>
+                    <div class="flex flex-col md:flex-row gap-8 text-center">
+                        <!-- Vision Card -->
+                        <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                            <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                To be the most trusted and accessible digital marketplace, empowering creators and businesses of all sizes to build and grow their online presence with ease.
+                            </p>
+                        </div>
+                        <!-- Mission Card -->
+                        <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                            <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                To provide a comprehensive suite of high-quality, affordable digital products while prioritizing customer satisfaction and delivering solutions that meet the specific wishes of our clients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Affordable Hosting</h3>
+                        <p class="text-gray-600">Secure and reliable hosting packages that fit any budget and scale with your business.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Promo Domains</h3>
+                        <p class="text-gray-600">Find the perfect domain name for your brand with our special promotional offers.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Social Media Marketing</h3>
+                        <p class="text-gray-600">Boost your online presence and engage with your audience through our SMM services.</p>
+                    </div>
+                     <!-- Service Card 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Website Creation</h3>
+                        <p class="text-gray-600">Get a stunning, interactive, and responsive website built to your exact specifications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Message Us</h2>
+                <p class="text-center text-gray-600 mb-12">Have a question or a project in mind? We'd love to hear from you.</p>
+                
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <form id="contactForm" novalidate>
+                            <!-- Name -->
+                            <div class="mb-6 form-control">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <!-- Email -->
+                            <div class="mb-6 form-control">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <!-- Phone Number -->
+                            <div class="mb-6 form-control">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
+                                 <div class="error-message"></div>
+                            </div>
+                            <!-- Message -->
+                            <div class="mb-6 form-control">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required></textarea>
+                                <div class="error-message"></div>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="formSubmissionResult" class="hidden mt-6 p-6 bg-green-100 border border-green-300 rounded-lg">
+                        <h3 class="text-lg font-semibold text-green-800 mb-2">Your message has been received!</h3>
+                        <div id="submittedData" class="text-green-700"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Azarr Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
